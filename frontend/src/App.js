@@ -614,7 +614,7 @@ const ContactSection = () => {
 
             {/* Map */}
             <a 
-              href="https://yandex.ru/maps/-/CHEJnWSu"
+              href="https://yandex.ru/maps/?text=Всеволожский+проспект+107+Всеволожск"
               target="_blank"
               rel="noopener noreferrer"
               className="block map-container rounded-sm overflow-hidden shadow-lg"
