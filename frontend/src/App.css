@@ -1,34 +1,134 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+/* Hero parallax overlay */
+.hero-overlay {
+  background: linear-gradient(90deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.85) 40%, rgba(255,255,255,0) 70%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+@media (max-width: 1024px) {
+  .hero-overlay {
+    background: linear-gradient(180deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0.6) 100%);
+  }
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+/* Service card hover effect */
+.service-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
-.App-link {
-    color: #61dafb;
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 51, 160, 0.15);
+  border-color: #0033A0;
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+.service-card img {
+  transition: transform 0.5s ease;
+}
+
+.service-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Button styles */
+.btn-primary {
+  background-color: #DA291C;
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #B01F15;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(218, 41, 28, 0.3);
+}
+
+.btn-secondary {
+  background-color: white;
+  color: #0033A0;
+  border: 2px solid #0033A0;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #0033A0;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Input focus */
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #0033A0 !important;
+  box-shadow: 0 0 0 3px rgba(0, 51, 160, 0.1);
+}
+
+/* Header styles */
+.header-fixed {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Section animations */
+.section-fade {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.section-fade.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Map container */
+.map-container {
+  transition: box-shadow 0.3s ease;
+}
+
+.map-container:hover {
+  box-shadow: 0 10px 30px rgba(0, 51, 160, 0.15);
+}
+
+/* Contact form */
+.contact-form input,
+.contact-form textarea {
+  background-color: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Mobile menu */
+.mobile-menu {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+/* Footer links */
+.footer-link {
+  transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+  color: #DA291C;
+}
+
+/* Phone link styling */
+.phone-link {
+  transition: color 0.2s ease, transform 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.phone-link:hover {
+  color: #DA291C;
+}
+
+/* Smooth scroll offset for fixed header */
+section[id] {
+  scroll-margin-top: 80px;
 }
