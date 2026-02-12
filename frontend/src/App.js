@@ -131,7 +131,7 @@ const Header = () => {
           <a href="#" className="flex items-center gap-2" data-testid="logo-link">
             <Car className="w-8 h-8 text-[#0033A0]" />
             <span className="font-bold text-lg lg:text-xl text-[#0033A0] hidden sm:block">
-              Автосервис Всеволожск
+              Автосервис Южный
             </span>
           </a>
 
@@ -623,7 +623,7 @@ const ContactSection = () => {
               <div className="relative">
                 <img
                   src="https://static-maps.yandex.ru/1.x/?lang=ru_RU&ll=30.654900,60.021900&z=15&l=map&size=650,300&pt=30.654900,60.021900,pm2rdm"
-                  alt="Карта - Автосервис Всеволожск"
+                  alt="Карта - Автосервис Южный"
                   className="w-full h-64 object-cover"
                 />
                 <div className="absolute inset-0 bg-[#0033A0]/10 hover:bg-transparent transition-colors duration-300 flex items-center justify-center">
@@ -758,7 +758,7 @@ const Footer = () => {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <Car className="w-8 h-8 text-white" />
-              <span className="font-bold text-xl">Автосервис Всеволожск</span>
+              <span className="font-bold text-xl">Автосервис Южный</span>
             </div>
             <p className="text-white/70 leading-relaxed">
               Профессиональный ремонт и обслуживание автомобилей любой сложности
@@ -808,7 +808,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-white/20 pt-8 text-center">
           <p className="text-white/50 text-sm">
-            © {new Date().getFullYear()} Автосервис Всеволожск. Все права защищены.
+            © {new Date().getFullYear()} Автосервис Южный. Все права защищены.
           </p>
         </div>
       </div>
