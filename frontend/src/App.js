@@ -537,62 +537,61 @@ const ContactSection = () => {
           </p>
         </motion.div>
 
-        <div className="max-w-2xl mx-auto">
-          {/* Contact Info & Map */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          {/* Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
           >
-            {/* Contact Details */}
-            <div className="bg-white p-8 rounded-sm shadow-lg mb-8">
-              <h3 className="text-xl font-bold text-[#0033A0] mb-6">
+            <div className="bg-white p-6 rounded-sm shadow-lg h-full">
+              <h3 className="text-lg font-bold text-[#0033A0] mb-5">
                 Наши контакты
               </h3>
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-[#0033A0]/10 rounded-sm flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-6 h-6 text-[#0033A0]" />
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 bg-[#0033A0]/10 rounded-sm flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-5 h-5 text-[#0033A0]" />
                   </div>
                   <div>
-                    <p className="font-medium text-[#0F172A]">Адрес</p>
-                    <p className="text-[#475569]">Всеволожский проспект, д. 107, Всеволожск</p>
+                    <p className="font-medium text-[#0F172A] text-sm">Адрес</p>
+                    <p className="text-[#475569] text-sm">Всеволожский проспект, д. 107, Всеволожск</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-[#0033A0]/10 rounded-sm flex items-center justify-center flex-shrink-0">
-                    <Phone className="w-6 h-6 text-[#0033A0]" />
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 bg-[#0033A0]/10 rounded-sm flex items-center justify-center flex-shrink-0">
+                    <Phone className="w-5 h-5 text-[#0033A0]" />
                   </div>
                   <div>
-                    <p className="font-medium text-[#0F172A]">Телефон</p>
+                    <p className="font-medium text-[#0F172A] text-sm">Телефон</p>
                     <a 
                       href="tel:+79219376137" 
-                      className="text-[#DA291C] font-bold text-lg hover:underline"
+                      className="text-[#DA291C] font-bold hover:underline"
                       data-testid="contact-phone-link"
                     >
                       +7 921 937 61 37
                     </a>
                   </div>
                 </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-[#0033A0]/10 rounded-sm flex items-center justify-center flex-shrink-0">
-                    <Clock className="w-6 h-6 text-[#0033A0]" />
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 bg-[#0033A0]/10 rounded-sm flex items-center justify-center flex-shrink-0">
+                    <Clock className="w-5 h-5 text-[#0033A0]" />
                   </div>
                   <div>
-                    <p className="font-medium text-[#0F172A]">Режим работы</p>
-                    <p className="text-[#475569]">Ежедневно с 9:00 до 21:00</p>
+                    <p className="font-medium text-[#0F172A] text-sm">Режим работы</p>
+                    <p className="text-[#475569] text-sm">Ежедневно с 9:00 до 21:00</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-[#0033A0]/10 rounded-sm flex items-center justify-center flex-shrink-0">
-                    <Mail className="w-6 h-6 text-[#0033A0]" />
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 bg-[#0033A0]/10 rounded-sm flex items-center justify-center flex-shrink-0">
+                    <Mail className="w-5 h-5 text-[#0033A0]" />
                   </div>
                   <div>
-                    <p className="font-medium text-[#0F172A]">Email</p>
+                    <p className="font-medium text-[#0F172A] text-sm">Email</p>
                     <a 
                       href="mailto:udacha1983@inbox.ru" 
-                      className="text-[#DA291C] font-medium hover:underline"
+                      className="text-[#DA291C] font-medium hover:underline text-sm"
                       data-testid="contact-email-link"
                     >
                       udacha1983@inbox.ru
@@ -601,23 +600,30 @@ const ContactSection = () => {
                 </div>
               </div>
             </div>
+          </motion.div>
 
-            {/* Map */}
+          {/* Map */}
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+          >
             <a 
               href="https://yandex.ru/maps/?text=Автосервис+Южный+Всеволожский+проспект+107+Всеволожск"
               target="_blank"
               rel="noopener noreferrer"
-              className="block map-container rounded-sm overflow-hidden shadow-lg"
+              className="block map-container rounded-sm overflow-hidden shadow-lg h-full"
               data-testid="map-link"
             >
-              <div className="relative">
+              <div className="relative h-full min-h-[280px]">
                 <img
                   src="https://static-maps.yandex.ru/1.x/?lang=ru_RU&ll=30.654900,60.021900&z=15&l=map&size=650,300&pt=30.654900,60.021900,pm2rdm"
                   alt="Карта - Автосервис Южный"
-                  className="w-full h-64 object-cover"
+                  className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-[#0033A0]/10 hover:bg-transparent transition-colors duration-300 flex items-center justify-center">
-                  <span className="bg-white px-4 py-2 rounded-sm shadow-md text-[#0033A0] font-medium">
+                  <span className="bg-white px-4 py-2 rounded-sm shadow-md text-[#0033A0] font-medium text-sm">
                     Открыть на Яндекс.Картах
                   </span>
                 </div>
