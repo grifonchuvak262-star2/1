@@ -610,6 +610,21 @@ const ContactSection = () => {
                     <p className="text-[#475569]">Ежедневно с 9:00 до 21:00</p>
                   </div>
                 </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-[#0033A0]/10 rounded-sm flex items-center justify-center flex-shrink-0">
+                    <Mail className="w-6 h-6 text-[#0033A0]" />
+                  </div>
+                  <div>
+                    <p className="font-medium text-[#0F172A]">Email</p>
+                    <a 
+                      href="mailto:udacha1983@inbox.ru" 
+                      className="text-[#DA291C] font-medium hover:underline"
+                      data-testid="contact-email-link"
+                    >
+                      udacha1983@inbox.ru
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -802,6 +817,14 @@ const Footer = () => {
                 <Clock className="w-5 h-5 text-[#DA291C]" />
                 <span>Ежедневно с 9:00 до 21:00</span>
               </div>
+              <a 
+                href="mailto:udacha1983@inbox.ru" 
+                className="flex items-center gap-3 text-white/70 hover:text-white transition-colors"
+                data-testid="footer-email"
+              >
+                <Mail className="w-5 h-5 text-[#DA291C]" />
+                <span>udacha1983@inbox.ru</span>
+              </a>
             </div>
           </div>
         </div>
