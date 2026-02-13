@@ -563,7 +563,7 @@ const ContactSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="max-w-2xl mx-auto">
           {/* Contact Info & Map */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -649,111 +649,6 @@ const ContactSection = () => {
                 </div>
               </div>
             </a>
-          </motion.div>
-
-          {/* Contact Form */}
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6 }}
-          >
-            <div className="bg-white p-8 rounded-sm shadow-lg h-full">
-              <h3 className="text-xl font-bold text-[#0033A0] mb-6">
-                Оставить заявку
-              </h3>
-
-              {isSubmitted ? (
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  className="text-center py-12"
-                  data-testid="form-success"
-                >
-                  <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
-                  <h4 className="text-xl font-bold text-[#0F172A] mb-2">
-                    Заявка отправлена!
-                  </h4>
-                  <p className="text-[#475569]">
-                    Мы свяжемся с вами в ближайшее время
-                  </p>
-                  <button
-                    onClick={() => setIsSubmitted(false)}
-                    className="mt-6 text-[#0033A0] font-medium hover:underline"
-                    data-testid="send-another-btn"
-                  >
-                    Отправить ещё одну заявку
-                  </button>
-                </motion.div>
-              ) : (
-                <form onSubmit={handleSubmit} className="contact-form space-y-6" data-testid="contact-form">
-                  <div>
-                    <label className="block text-[#0F172A] font-medium mb-2">
-                      Ваше имя *
-                    </label>
-                    <input
-                      type="text"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      required
-                      placeholder="Иван Иванов"
-                      className="w-full px-4 py-3 rounded-sm bg-[#F8FAFC] border border-[#E2E8F0] focus:border-[#0033A0]"
-                      data-testid="input-name"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-[#0F172A] font-medium mb-2">
-                      Телефон *
-                    </label>
-                    <input
-                      type="tel"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      required
-                      placeholder="+7 (___) ___-__-__"
-                      className="w-full px-4 py-3 rounded-sm bg-[#F8FAFC] border border-[#E2E8F0] focus:border-[#0033A0]"
-                      data-testid="input-phone"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-[#0F172A] font-medium mb-2">
-                      Сообщение
-                    </label>
-                    <textarea
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      rows={4}
-                      placeholder="Опишите вашу проблему или задайте вопрос..."
-                      className="w-full px-4 py-3 rounded-sm bg-[#F8FAFC] border border-[#E2E8F0] focus:border-[#0033A0] resize-none"
-                      data-testid="input-message"
-                    ></textarea>
-                  </div>
-
-                  {error && (
-                    <p className="text-red-500 text-sm" data-testid="form-error">{error}</p>
-                  )}
-
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="btn-primary w-full flex items-center justify-center gap-2 px-8 py-4 rounded-sm disabled:opacity-70"
-                    data-testid="submit-btn"
-                  >
-                    {isSubmitting ? (
-                      "Отправка..."
-                    ) : (
-                      <>
-                        <Send className="w-5 h-5" />
-                        Отправить заявку
-                      </>
-                    )}
-                  </button>
-                </form>
-              )}
-            </div>
           </motion.div>
         </div>
       </div>
