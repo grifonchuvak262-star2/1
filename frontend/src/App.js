@@ -16,7 +16,8 @@ import {
   Car,
   PaintBucket,
   Send,
-  CheckCircle
+  CheckCircle,
+  Mail
 } from "lucide-react";
 import axios from "axios";
 
@@ -614,7 +615,7 @@ const ContactSection = () => {
 
             {/* Map */}
             <a 
-              href="https://yandex.ru/maps/?text=Всеволожский+проспект+107+Всеволожск"
+              href="https://yandex.ru/maps/?text=Автосервис+Южный+Всеволожский+проспект+107+Всеволожск"
               target="_blank"
               rel="noopener noreferrer"
               className="block map-container rounded-sm overflow-hidden shadow-lg"
