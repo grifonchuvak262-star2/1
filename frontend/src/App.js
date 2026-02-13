@@ -512,32 +512,6 @@ const AboutSection = () => {
 
 // Contact Section
 const ContactSection = () => {
-  const [formData, setFormData] = useState({ name: "", phone: "", message: "" });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [error, setError] = useState("");
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setError("");
-
-    try {
-      await axios.post(`${API}/contact`, formData);
-      setIsSubmitted(true);
-      setFormData({ name: "", phone: "", message: "" });
-    } catch (err) {
-      setError("Произошла ошибка. Пожалуйста, позвоните нам напрямую.");
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
   return (
     <section 
       id="contacts" 
