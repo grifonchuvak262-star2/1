@@ -257,7 +257,7 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <h1 
-              className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#0033A0] leading-tight mb-6"
+              className="text-2xl sm:text-3xl lg:text-5xl xl:text-6xl font-bold text-[#0033A0] leading-tight mb-4 sm:mb-6"
               data-testid="hero-title"
             >
               Полный спектр услуг по ремонту и обслуживанию легковых авто
@@ -268,7 +268,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-lg lg:text-xl text-[#475569] mb-8 leading-relaxed"
+            className="text-base sm:text-lg lg:text-xl text-[#475569] mb-6 sm:mb-8 leading-relaxed"
             data-testid="hero-subtitle"
           >
             Теплая атмосфера, индивидуальный подход, кратчайшие сроки и привлекательные цены
@@ -282,15 +282,15 @@ const HeroSection = () => {
           >
             <a
               href="tel:+79219376137"
-              className="btn-primary inline-flex items-center justify-center gap-3 px-8 py-4 rounded-sm text-lg shadow-lg"
+              className="btn-primary inline-flex items-center justify-center gap-2 px-6 py-4 rounded-sm text-base sm:text-lg shadow-lg whitespace-nowrap"
               data-testid="hero-cta-btn"
             >
-              <Phone className="w-5 h-5" />
-              Позвонить +7 921 937 61 37
+              <Phone className="w-5 h-5 flex-shrink-0" />
+              <span>Позвонить</span>
             </a>
             <a
               href="#services"
-              className="btn-secondary inline-flex items-center justify-center gap-2 px-8 py-4 rounded-sm text-lg"
+              className="btn-secondary inline-flex items-center justify-center gap-2 px-6 py-4 rounded-sm text-base sm:text-lg"
               data-testid="hero-services-btn"
             >
               Наши услуги
