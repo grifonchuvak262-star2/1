@@ -302,15 +302,15 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
-            className="mt-12 flex flex-wrap gap-6"
+            className="mt-8 sm:mt-12 flex flex-col sm:flex-row gap-3 sm:gap-6"
           >
             <div className="flex items-center gap-2 text-[#0F172A]">
-              <Clock className="w-5 h-5 text-[#DA291C]" />
-              <span className="font-medium">с 9:00 до 21:00</span>
+              <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-[#DA291C]" />
+              <span className="font-medium text-sm sm:text-base">с 9:00 до 21:00</span>
             </div>
             <div className="flex items-center gap-2 text-[#0F172A]">
-              <MapPin className="w-5 h-5 text-[#DA291C]" />
-              <span className="font-medium">Всеволожский пр., д. 107</span>
+              <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-[#DA291C]" />
+              <span className="font-medium text-sm sm:text-base">Всеволожский пр., д. 107</span>
             </div>
           </motion.div>
         </div>
