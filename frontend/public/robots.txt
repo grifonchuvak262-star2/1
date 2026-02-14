@@ -1,0 +1,17 @@
+# Robots.txt for Автосервис Южный
+# https://www.robotstxt.org/robotstxt.html
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://carfix-vsev.preview.emergentagent.com/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Block common bot traps and unnecessary paths
+Disallow: /api/
+Disallow: /*.json$
+Disallow: /static/js/*.map
+Disallow: /static/css/*.map
